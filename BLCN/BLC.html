@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>BULUOCRAFT服务器</title>
+    <style>
+        /* 输入框样式 */
+        .input-box {
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        /* 标题动效 */
+        .title {
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* 新闻div样式 */
+        .news {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 50px;
+        }
+        
+        /* 排行榜样式 */
+        .leaderboard {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 30px;
+            margin: 50px;
+        }
+        h2{
+        	color:white;
+        }
+        p{
+        	color:white;
+        }
+        li{
+        	color: white;
+        }
+         h1{
+        	color:white;
+        }
+        a{
+        	color: orange;
+        	transition: 0.7s;
+        }
+        a:hover{
+        	color:#0077FF;
+        	transition:0.7s;
+        }
+        li{
+        	color:#B4D0FF
+        }
+    </style>
+</head>
+<body background="BLCBG.jpg">
+	<!--
+		-------------------------------------------------------------
+		你好！你既然打开了这个网页文件，那么你肯定要改点什么，让Aog来给你一些介绍和提示awa:
+		以下所有的模块都有注释!可以更方便的寻找awa
+		开始介绍！
+		-------------------------------------------------------------
+		1.【"新闻div"板块】
+			如果你有新闻想扔进官网，那么你可以找到一个名为<!-- 新闻div >的注释
+			它们以下就是新闻版块了！在修改新闻之前，请复制一份“<p>没有更多新闻了...</p>”
+			并粘贴在上一个”<p>没有更多新闻了...</p>“下面，然后在前一个”<p>没有更多新闻了...</p>“中修改新闻。
+			例如：
+				<p>好消息！<a href="index.html">BULUOCRAFT</a>服务器二周目1.20高版本服务器在2023年8.1日就要开服啦！！！</p>
+				<p>一个新的新闻！</p>
+				<p>没有更多新闻了...</p>
+			你学会了吗awa.
+		-------------------------------------------------------------
+		2.【"服务器活动"板块】
+			直接将<p>暂无</p>中的暂无改为你的活动就行！
+		-------------------------------------------------------------
+		3.【"输入框"板块】
+			Aog的JS水平有限，若你会JS请帮助我把这玩意写完，就是一个言论发表功能，谢谢。
+		-------------------------------------------------------------
+		>
+    <!-- 输入框 -->
+    <p>未完成的言论发表功能:</p>
+    <input type="text" id="inputText" class="input-box" placeholder="输入你要BB的话">
+    <script>var str = prompt("进入此页面前，请同意一些东西，很简单的awa:\r 1.保证你是一个文明的玩家，不是熊孩子\r2.保证你同意主页“关于”页面中部分内容\r3.若你是玩家集体的首脑，请保持友好的态度进入，若对实力排行有异议，请私信Aog\r[NO]如过你不同意，可以不用输入任何东西并点击取消\r[YES]如果你同意，你可以随便输入点啥并点击确定以进入"); 
+if (str === null) {
+    alert("你似乎不同意\r那你可以点击浏览器自带的’<‘按钮离开这个页面")
+}else{
+    alert("欢迎进入Aog给玩家们开的小灶！")
+}
+    	</script>
+    
+    <!-- BULUOCRAFT标题 -->
+    <h1 style="text-align: center"class="title">BULUOCRAFT服务器玩家频道</h1>
+    
+    <!-- 新闻div -->
+    <div class="news">
+        <h2>最新新闻</h2>
+        
+        <p>好消息！<a href="index.html">BULUOCRAFT</a>服务器二周目1.20高版本服务器在2023年8.1日就要开服啦！！！</p>
+        <p>没有更多新闻了...</p>
+        
+    </div>
+    <!-- 服务器活动 -->
+    <div class="news">
+        <h2>服务器活动：</h2>
+        <p>暂无</p>
+    </div>
+    <!-- 排行榜 -->
+    <div class="leaderboard">
+        <h2>服务器<a href="playG.html">玩家集体</a>排行榜</h2>
+        <ol>
+            <li>ITI - Buluo233</li>
+            <li>PECL - uknowimbestcn</li>
+            <li>PDC - 氰理大师</li>
+        </ol>
+    </div>
+    
+    <!-- 社区互动留言板、论坛、活动等功能 -->
+    <div>
+        <!-- 在这里添加社区互动的相关内容 -->
+    </div>
+    
+    <script>
+        // 获取输入框和显示区域的元素
+        var inputText = document.getElementById("inputText");
+        var displayArea = document.createElement("p");
+        
+        // 监听输入框的输入事件
+        inputText.addEventListener("input", function() {
+            displayArea.innerText = inputText.value;
+        });
+        
+        // 将显示区域添加到页面中
+        document.body.appendChild(displayArea);
+    </script>
+</body>
+</html>
